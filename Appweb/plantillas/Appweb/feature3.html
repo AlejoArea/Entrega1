@@ -7,20 +7,11 @@
 
 <h1> Bienvenido a la coleccion <h1> 
 
-<h2> Ingrese lo que desea buscar <h2> 
 
-{% endblock %}
-
-{% block inputs%}
-
-
-<form action="/Appweb/cartas/" method="GET">
-    <input type="text" name="nombre" id="nombre">
-    <input type="submit" value="Buscar">
-</form>
-<p>  Resutaldo de busqueda: {{nombre}}  <p>
+<!-- <h2> Ingrese lo que desea buscar <h2> -->
+    <p>  Coleccionde cartas:  <p>
     
     {% for carta in carta %}
-        <p> Nombre: {{carta.nombre}} ---- Precio: {{carta.precio}} ----- Stock: {{carta.stock}} <p>
+        <h3> Nombre: {{carta.nombre}} ---- Precio: {{carta.precio}} ----- Stock: {{carta.stock}} <h3>
     {% endfor %}
 {% endblock %}

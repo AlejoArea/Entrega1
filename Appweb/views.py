@@ -16,8 +16,11 @@ def feature2(request):
     return render(request,"Appweb/feature2.html")
 
 def feature3(request):
+    #Muestra todas las cartas en la plantilla feature y en url coleccion
+    carta = Cartas.objects.filter()
 
-    return render(request,"Appweb/feature3.html")
+    return render(request,"Appweb/feature3.html", {"carta":carta})
+
 
 """
 def cartaFormulario(request):
